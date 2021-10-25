@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "28680c3c-8950-419f-9504-4d9c281388cf",
+		"name": "Openpay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Name",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Last name",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "email",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "phone number",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "city",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text"
+						},
+						{
+							"key": "line1",
+							"value": "line1",
+							"type": "text"
+						},
+						{
+							"key": "line2",
+							"value": "line2",
+							"type": "text"
+						},
+						{
+							"key": "line3",
+							"value": "line3",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "postalcode",
+							"type": "text"
+						},
+						{
+							"key": "countryCode",
+							"value": "countrycode",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "false",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/customers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"customers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ID",
+							"value": "",
+							"description": "Add ID",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/customers/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"customers",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "method",
+							"value": "card",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description",
+							"type": "text"
+						},
+						{
+							"key": "order",
+							"value": "000001",
+							"type": "text"
+						},
+						{
+							"key": "ID",
+							"value": "",
+							"description": "Add ID",
+							"type": "text"
+						},
+						{
+							"key": "send",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "confirm",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/charge/redirect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"charge",
+						"redirect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bank",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ID",
+							"value": "",
+							"description": "Add ID",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description",
+							"type": "text"
+						},
+						{
+							"key": "order",
+							"value": "0000001",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "bank_account",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/charge/bank",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"charge",
+						"bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ID",
+							"value": "",
+							"description": "Add ID",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "order",
+							"value": "8888",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2021-10-26",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "store",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/OpenpayExample/charge/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"OpenpayExample",
+						"charge",
+						"shop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
