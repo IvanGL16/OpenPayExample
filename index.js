@@ -16,8 +16,3 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/OpenpayExample/customers', customerRoutes);
 app.use('/OpenpayExample/charge', chargeRoutes);
-            // for (const x of list) {
-            //     console.log(customerModel.customer(x));
-            // }
-            // var person = new customerModel.customer("ivan", "gomez", "test@test.com", "2382243223");
-            // console.log(person);
